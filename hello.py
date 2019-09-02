@@ -8,12 +8,8 @@ class Relationship:
         self.child = child
 
     def myfunc(self):
-        print("We have been together for ", end='')
-        print(self.year, end='')
-        print(" years. We are ", end='')
-        print(self.gender, end='')
-        print(". We have ", end='')
-        print(self.child, end='')
+        print("We have been together for " + str(self.year) + " years. We are " + str(self.gender), end='')
+        print(". We have " + str(self.child), end='')  # use str() to concat strings
         if self.child == 1:
             print(' child.')
         else:
@@ -31,5 +27,7 @@ class Partnership(Relationship):
 
 data2 = Partnership(3, 'girls', 'no', 'not married')
 data2.myfunc()
-data3 = Relationship(6,'boys', 1)
+data3 = Relationship(6, 'boys', 1)
 data3.myfunc()
+
+# how to print Partnership properties
