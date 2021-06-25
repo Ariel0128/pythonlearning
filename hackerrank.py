@@ -1,3 +1,33 @@
+# dictionary的用法：：：：
+# pair data
+
+Dict={}
+for x in sorted(s):
+    Dict[x]=Dict.get(x,0)+1   
+#Sorting Dict by value (using Dict.get) & storing keys.
+Dict_keys=sorted(Dict, key=Dict.get, reverse=True)  
+
+for key in Dict_keys[:3]:
+    print(key,Dict[key])
+
+    #-----------------------    
+    
+# my version: too complicated
+
+def funcname(string):
+    uni_char=sorted(list(set(string)))
+    num_list=[] #to store the char and its corresponding frequency
+    for char in uni_char:
+        num = sorted(string).count(char)
+        num_list.append([char,num])
+    num_list.sort(key=lambda x: x[1], reverse=True)
+    print(num_list[0][0],num_list[0][1]) 
+    print(num_list[1][0],num_list[1][1])
+    print(num_list[2][0],num_list[2][1])
+    
+#############
+
+    
 # for语句的简写，注意对对象的处理要单独放在最前面，之前错写成 .append(...for... in.. if....)
 
 def what(s,k):
