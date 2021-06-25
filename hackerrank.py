@@ -1,3 +1,13 @@
+# for语句的简写，注意对对象的处理要单独放在最前面，之前错写成 .append(...for... in.. if....)
+
+def what(s,k):
+    for i in range(0,len(s)//k):
+        uni_char=[]
+        char_list=list(s[k*i:k*i+k])
+        [uni_char.append(char) for char in char_list if char not in uni_char]
+        u= ''.join(uni_char)
+        print(u)
+
 #conditional function
 
 def fizzBuzz(n):
