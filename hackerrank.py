@@ -89,3 +89,15 @@ def findSubstring(s, k):
         return s[x:x+k]
     else:
         return string
+
+# 类似的：
+
+def score_words(words):
+    score = 0
+    for word in words:
+        num_vowels = sum(1 if letter in vowels else 0 for letter in word)
+        if num_vowels % 2 == 0:
+            score += 2
+        else:
+            score += 1
+    return score
