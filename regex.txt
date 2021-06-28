@@ -57,9 +57,12 @@ m.group(1)
 
 --------
 
-筛选
-筛选出
+查找到所有出现在两个非无音字母中间的，重复出现的元音。input中可能包括字母数字空格和标点。
+
 s = '[qwrtypsdfghjklzxcvbnm]'
 a = re.findall('(?<=' + s +')([aeiou]{2,})' + s, input(), re.I)
 
 (?<=' + s +')     
+
+
+
