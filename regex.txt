@@ -64,5 +64,23 @@ a = re.findall('(?<=' + s +')([aeiou]{2,})' + s, input(), re.I)
 
 (?<=' + s +')     
 
+--------------
+s是长字符串，k是短的，在s里找到k, 并print出k出现的位置
+比如 s='aaabdefaacde'
+k='aa'
+位置就是：
+（0，1）
+（1，2）
+（7，8）
 
+s,k = input(),input()
+import re
+pattern=re.compile(k)
+ms=pattern.search(s)
+if ms:
+    while ms:
+        print((ms.start(),ms.end()-1))
+        ms=pattern.search(s,ms.start()+1)
+else:
+    print((-1,-1))
 
