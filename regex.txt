@@ -16,3 +16,14 @@ underscore
 [a-z]{1, 3}     => will match any string that has lowercase and 
 length one, two or three
 $               => end of a string
+
+
+def verify_decimal(string):
+    pattern=re.compile("^[+-]{0,1}[0-9]*\.[0-9]$")
+    return bool(pattern.match(string))
+
+Note:
+[+-]            => will match either of them
+{0,1}           => will match 0 次到 1 次， 也可以用 ？来代替
+*               => will match 0 个 或 多个  --区别于+
+bool()          => make the result to be boolean
