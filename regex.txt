@@ -43,3 +43,23 @@ re.split(pattern, string)
 其中的pattern, 是指分割字符的标志，比如用逗号或者句号分割字符串，pattern处放的就是 “[,.]”
 re.split(r"[,.]”, '100,000.000')  
 的结果是 ['100','000','000']
+
+---------
+
+匹配重复的内容， （）分组，    然后定义重复几遍的条件
+                |       |  |
+m = re.search(r"(\w(?!_))\1+", s.strip())
+
+\w(?!_)          => alphanumeric characters
+
+m.group(1)
+查看第一个匹配的内容。
+
+--------
+
+筛选
+筛选出
+s = '[qwrtypsdfghjklzxcvbnm]'
+a = re.findall('(?<=' + s +')([aeiou]{2,})' + s, input(), re.I)
+
+(?<=' + s +')     
