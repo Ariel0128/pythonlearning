@@ -27,3 +27,9 @@ Note:
 {0,1}           => will match 0 次到 1 次， 也可以用 ？来代替
 *               => will match 0 个 或 多个  --区别于+
 bool()          => make the result to be boolean
+
+---------
+re.split(pattern, string) 
+其中的pattern, 是指分割字符的标志，比如用逗号或者句号分割字符串，pattern处放的就是 “[,.]”
+re.split(r"[,.]”, '100,000.000')  
+的结果是 ['100','000','000']
